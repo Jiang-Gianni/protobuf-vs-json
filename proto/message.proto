@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+enum MyStatus {
+    STATUS_ZERO = 0;
+    STATUS_ONE = 1;
+    STATUS_TWO = 2;
+}
+
+message MyMessage {
+    int32 my_int = 1;
+    bool my_bool = 2;
+    bytes my_bytes = 3;
+    string my_string = 4;
+    google.protobuf.Timestamp my_timestamp = 5;
+    MyStatus my_my_status = 6;
+}
+
+message MyMessageList {
+    repeated MyMessage values = 1;
+}
