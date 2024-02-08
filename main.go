@@ -10,6 +10,8 @@ func main() {
 	fmt.Println("MsgListProtoBytes10 len: ", len(MsgListProtoBytes10))
 	fmt.Println("MsgListJsonBytes10 len: ", len(MsgListJsonBytes10))
 
+	fmt.Println("MsgProtoBytes: ", MsgProtoBytes)
+	fmt.Println("MsgJsonBytes: ", MsgJsonBytes)
 	fmt.Println("MsgProtoBytes string: ", string(MsgProtoBytes))
 	fmt.Println("MsgJsonBytes string: ", string(MsgJsonBytes))
 }

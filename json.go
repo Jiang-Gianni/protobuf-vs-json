@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/Jiang-Gianni/protobuf-vs-json/proto"
+	pb "github.com/Jiang-Gianni/protobuf-vs-json/proto"
 )
 
 var (
@@ -44,7 +44,7 @@ func JsonUnmarshalMsg() {
 }
 
 func JsonUnmarshalMsgList10() {
-	var list proto.MyMessageList
+	var list pb.MyMessageList
 	err := json.Unmarshal(MsgListJsonBytes10, &list)
 	if err != nil {
 		panic(err)

@@ -1,7 +1,7 @@
 package main
 
 import (
-	my "github.com/Jiang-Gianni/protobuf-vs-json/proto"
+	pb "github.com/Jiang-Gianni/protobuf-vs-json/proto"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -43,7 +43,7 @@ func ProtoUnmarshalMsg() {
 }
 
 func ProtoUnmarshalMsgList10() {
-	var list my.MyMessageList
+	var list pb.MyMessageList
 	err := proto.Unmarshal(MsgListProtoBytes10, &list)
 	if err != nil {
 		panic(err)
