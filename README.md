@@ -38,23 +38,23 @@ go version go1.21.2 linux/amd64
 
 
 ```bash
- go test -bench=.
+ go test -bench=. -benchmem
 goos: linux
 goarch: amd64
 pkg: github.com/Jiang-Gianni/protobuf-vs-json
 cpu: AMD Ryzen 5 5600G with Radeon Graphics
-BenchmarkProtoMarshalMsg-12              7023201               167.8 ns/op
-BenchmarkJsonMarshalMsg-12               3288889               363.3 ns/op
-BenchmarkProtoMarshalMsgList10-12         679734              1474 ns/op
-BenchmarkJsonMarshalMsgList10-12          351156              3069 ns/op
-BenchmarkProtoMarshalMsgList100-12         87624             13407 ns/op
-BenchmarkJsonMarshalMsgList100-12          42181             28234 ns/op
-BenchmarkProtoUnmarshalMsg-12            4935084               240.5 ns/op
-BenchmarkJsonUnmarshalMsg-12              521182              2088 ns/op
-BenchmarkProtoUnmarshalMsgList10-12       392547              2778 ns/op
-BenchmarkJsonUnmarshalMsgList10-12         57391             20478 ns/op
+BenchmarkProtoMarshalMsg-12              7126260         168.3 ns/op            48 B/op            1 allocs/op
+BenchmarkJsonMarshalMsg-12               3293227         362.0 ns/op           144 B/op            1 allocs/op
+BenchmarkProtoMarshalMsgList10-12         688795        1466 ns/op             528 B/op            3 allocs/op
+BenchmarkJsonMarshalMsgList10-12          363262        3051 ns/op            1681 B/op            3 allocs/op
+BenchmarkProtoMarshalMsgList100-12         88579             14021 ns/op            5056 B/op           3 allocs/op
+BenchmarkJsonMarshalMsgList100-12          38719             28450 ns/op           15320 B/op       3 allocs/op
+BenchmarkProtoUnmarshalMsg-12            5034340               238.0 ns/op            80 B/op       3 allocs/op
+BenchmarkJsonUnmarshalMsg-12              536793              2091 ns/op             304 B/op      10 allocs/op
+BenchmarkProtoUnmarshalMsgList10-12       407450              2764 ns/op            2232 B/op      46 allocs/op
+BenchmarkJsonUnmarshalMsgList10-12         56782             20421 ns/op            2760 B/op      74 allocs/op
 PASS
-ok      github.com/Jiang-Gianni/protobuf-vs-json        12.907s
+ok      github.com/Jiang-Gianni/protobuf-vs-json        13.019s
 ```
 
 
